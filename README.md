@@ -32,7 +32,7 @@ Contatos e informações de atendimento preenchidos. Os preços das peças estã
 
 ## Contato
 
-- WhatsApp: (71) 9911-8318
+- WhatsApp: (71) 99911-8318
 - Instagram: [@reginaalvesmoda](https://www.instagram.com/reginaalvesmoda/)
 - Atendimento: Lauro de Freitas e região
 - Prazo de produção: 7 a 15 dias
