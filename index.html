@@ -104,16 +104,6 @@ nav a:hover{color:var(--fg)}
 .peca p{font-size:16px;color:var(--fg-2);line-height:1.5}
 .preco{font-variant-numeric:tabular-nums;font-weight:600;color:var(--fg)!important}
 
-/* sobre */
-.sobre{background:var(--bg-2)}
-.sobre .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center}
-@media (max-width:820px){.sobre .wrap{grid-template-columns:minmax(0,1fr)}}
-.retrato{aspect-ratio:1;max-width:100%;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--sol),var(--laranja) 55%,var(--coral));display:grid;place-items:center;text-align:center;color:#2E2B28;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:14px;max-height:440px;justify-self:center;width:100%}
-.retrato span{background:rgba(251,244,228,.85);padding:8px 14px;border-radius:999px}
-.sobre .texto{display:flex;flex-direction:column;gap:18px;max-width:36em}
-.sobre .texto p{color:var(--fg-2)}
-.assinatura{font-family:var(--f-display);font-size:44px;font-weight:400;color:var(--fg)!important;line-height:1}
-
 /* como encomendar */
 .passos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;list-style:none;margin:0;padding:0;counter-reset:p}
 @media (max-width:900px){.passos{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -137,7 +127,9 @@ nav a:hover{color:var(--fg)}
 .canal small{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--faixa-2)}
 .canal strong{font-size:20px;font-weight:600;user-select:all;overflow-wrap:anywhere}
 .canal button{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid rgba(251,244,228,.45);background:transparent;color:var(--faixa-fg);font:600 13px var(--f-corpo);letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
-.canal button:hover{background:var(--faixa-fg);color:var(--faixa)}
+.canal button:hover,.canal .abrir:hover{background:var(--faixa-fg);color:var(--faixa)}
+.acoes-canal{display:flex;gap:10px;flex-wrap:wrap}
+.canal .abrir{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:var(--laranja);color:#211C18;font:600 13px var(--f-corpo);letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
 .contato .btn-cheio{background:var(--laranja);color:#211C18}
 .contato .btn-cheio:hover{background:var(--sol)}
 
@@ -187,12 +179,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
     <nav aria-label="Seções">
       <ul>
         <li><a href="#colecao">Coleção</a></li>
-        <li><a href="#sobre">Sobre</a></li>
         <li><a href="#encomendar">Como encomendar</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
-    <a class="btn btn-cheio" href="#contato"><svg aria-hidden="true"><use href="#wpp"/></svg><span>Encomendar</span></a>
+    <a class="btn btn-cheio" href="https://wa.me/557199118318" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wpp"/></svg><span>Encomendar</span></a>
   </div>
 </header>
 
@@ -312,19 +303,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
     </div>
   </section>
 
-  <section class="secao sobre" id="sobre">
-    <div class="wrap">
-      <div class="retrato"><span>Foto da Regina</span></div>
-      <div class="texto">
-        <p class="rotulo">Quem faz</p>
-        <h2>Prazer, sou a Regina</h2>
-        <p>[Conte aqui a sua história: como começou no artesanato, há quanto tempo faz crochê e pintura e o que inspira as suas peças.]</p>
-        <p>Cada peça, do crochê ao prato pintado, sai das minhas mãos. Por isso nenhuma peça é igual à outra, e todas são feitas para durar muitos verões.</p>
-        <p class="assinatura">Regina Alves</p>
-      </div>
-    </div>
-  </section>
-
   <section class="secao" id="encomendar">
     <div class="wrap">
       <div class="cabeca">
@@ -337,8 +315,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <ol class="passos">
         <li><h3>Escolha o modelo</h3><p>Mande o nome da peça ou uma foto de referência e conte quais cores você quer.</p></li>
         <li><h3>Combine os detalhes</h3><p>Cores, tamanho e, se tiver, um nome ou frase. Para roupas, envie busto, cintura e quadril.</p></li>
-        <li><h3>Produção</h3><p>A peça é feita à mão. O prazo é combinado na hora, conforme o modelo: [PRAZO].</p></li>
-        <li><h3>Entrega</h3><p>Retirada ou envio para todo o Brasil. Você recebe o código de rastreio.</p></li>
+        <li><h3>Produção</h3><p>A peça é feita à mão. O prazo de produção é de 7 a 15 dias, conforme o modelo.</p></li>
+        <li><h3>Entrega</h3><p>Retirada ou entrega em Lauro de Freitas e região. Para outras cidades, consulte pelo WhatsApp.</p></li>
       </ol>
       <div class="medidas"><b>Roupas</b><span class="chip">PP</span><span class="chip">P</span><span class="chip">M</span><span class="chip">G</span><span class="chip">GG</span><span class="chip">Sob medida</span></div>
     </div>
@@ -352,15 +330,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       </div>
       <div class="canais">
         <div class="canal">
-          <div><small>WhatsApp</small><strong id="c-wpp">[SEU NÚMERO]</strong></div>
-          <button type="button" data-copiar="c-wpp" id="b-wpp">Copiar</button>
+          <div><small>WhatsApp</small><strong id="c-wpp">(71) 9911-8318</strong></div>
+          <div class="acoes-canal"><a class="abrir" href="https://wa.me/557199118318" target="_blank" rel="noopener">Conversar</a><button type="button" data-copiar="c-wpp" id="b-wpp">Copiar</button></div>
         </div>
         <div class="canal">
-          <div><small>Instagram</small><strong id="c-insta">[@SEU_PERFIL]</strong></div>
-          <button type="button" data-copiar="c-insta" id="b-insta">Copiar</button>
+          <div><small>Instagram</small><strong id="c-insta">@reginaalvesmoda</strong></div>
+          <div class="acoes-canal"><a class="abrir" href="https://www.instagram.com/reginaalvesmoda/" target="_blank" rel="noopener">Ver perfil</a><button type="button" data-copiar="c-insta" id="b-insta">Copiar</button></div>
         </div>
         <div class="canal">
-          <div><small>Atendimento</small><strong>[CIDADE] · envio para todo o Brasil</strong></div>
+          <div><small>Atendimento</small><strong>Lauro de Freitas e região</strong></div>
         </div>
       </div>
     </div>

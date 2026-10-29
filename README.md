@@ -9,7 +9,7 @@ Site da marca Regina Alves: moda praia em crochê, pratos decorados e peças de 
 
 ## Seções
 
-Cabeçalho · Abertura · Coleção (moda praia, pratos decorados, casa e decoração) · Quem faz · Como encomendar · Contato
+Cabeçalho · Abertura · Coleção (moda praia, pratos decorados, casa e decoração) · Como encomendar · Contato
 
 ## Identidade visual
 
@@ -28,7 +28,14 @@ Fontes: [Playball](https://fonts.google.com/specimen/Playball) (títulos) e [Jos
 
 ## Pendências
 
-Os espaços entre colchetes no `index.html` ainda precisam ser preenchidos: WhatsApp, Instagram, cidade, prazo de produção e a história da Regina.
+Contatos e informações de atendimento preenchidos. Os preços das peças estão como "sob consulta".
+
+## Contato
+
+- WhatsApp: (71) 9911-8318
+- Instagram: [@reginaalvesmoda](https://www.instagram.com/reginaalvesmoda/)
+- Atendimento: Lauro de Freitas e região
+- Prazo de produção: 7 a 15 dias
 
 ## Publicar com GitHub Pages
 
